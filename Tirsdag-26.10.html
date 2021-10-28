@@ -17,8 +17,7 @@
      <script>
         function doSomething(element, color){
           var utenTekst=  document.getElementById('utenTekst')
-          utenTekst.innerHTML = element.innerHTML;
-          utenTekst.style.color = color;
+          utenTekst.innerHTML = `<div style="color: ${color}">${element.innerHTML}</div>`;
         }
      </script>
     </body>
