@@ -16,6 +16,7 @@ om det er rett eller galt - med hjelp av en variabel-->
         let answer = 'Her får du to hint.';
     //Model
         let userinput = "5";
+        let verdiAvInput;
     //View
         show();
         function show(){
@@ -24,13 +25,14 @@ om det er rett eller galt - med hjelp av en variabel-->
                 <div>${answer}<div>
                 <p>Det er større enn 4.</p> 
                 <p>15 delt på 3.</p>
-                <input onchange="checkUserInput(this.value)">
+                <input onchange="verdiAvInput=this.value">
+                <button onclick="checkUserInput()">Registrer</button>
             `;
             appDiv.innerHTML = html;
         }
     //Controller
-    function checkUserInput(thisUserinput){
-        if (userinput == thisUserinput){
+    function checkUserInput(){
+        if (userinput == verdiAvInput){
             answer = 'Du gjettet riktig! Bra jobba!';
         }
         else{
